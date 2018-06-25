@@ -1,0 +1,7 @@
+SQL> select * from student;
+
+       SNO SNAME                SADD
+---------- -------------------- --------------------
+      1021 ramesh               vizag
+       222 kingkhan             navimumbai
+    

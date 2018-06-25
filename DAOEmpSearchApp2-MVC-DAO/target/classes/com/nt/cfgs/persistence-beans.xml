@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="jofb"  class="org.springframework.jndi.JndiObjectFactoryBean">
+      <!-- <property name="jndiName"  value="DsJndi"/> for other server -->
+      <property name="jndiName"  value="java:/comp/env/DsJndi"/> <!-- fot tomcat -->
+   </bean>
+   
+   <bean id="template"  class="org.springframework.jdbc.core.JdbcTemplate">
+     <property name="dataSource"  ref="jofb"/>
+   </bean>
+   
+   <bean id="empDAO" class="com.nt.dao.EmployeeSearchDAOImpl">
+       <property name="jt" ref="template"/>
+   </bean>
+
+</beans>

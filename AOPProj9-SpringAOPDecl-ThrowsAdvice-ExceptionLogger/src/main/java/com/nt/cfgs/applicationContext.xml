@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!-- Target class cfg -->
+  <bean id="shopping"  class="com.nt.service.Shopping"/>
+  
+  <!-- Advice class cfg -->
+  <bean id="exceptionLogger"  class="com.nt.aspect.CommonExceptionLogger"/>
+  
+  <!-- Cfg ProxyFactoryBean to generate Proxyclass object -->
+  <bean id="pfb" class="org.springframework.aop.framework.ProxyFactoryBean">
+     <property name="target" ref="shopping"/>
+     <property name="interceptorNames">
+       <value>exceptionLogger</value>
+     </property>
+  </bean>
+
+</beans>

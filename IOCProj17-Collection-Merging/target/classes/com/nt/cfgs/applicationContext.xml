@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Problem 
+	<bean id="1stYear" class="com.nt.beans.EnggStudent" abstract="true">
+		<property name="subjects">
+			<list>
+				<value>c</value>
+				<value>m1</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="ece1stYear" class="com.nt.beans.EnggStudent" parent="1stYear">
+		<property name="subjects">
+			<list>
+				<value>ED</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="eee1stYear" class="com.nt.beans.EnggStudent" parent="1stYear">
+		<property name="subjects">
+			<list>
+				<value>ETC</value>
+			</list>
+		</property>
+	</bean>
+ -->
+<!--    Solution1 
+ <bean id="1stYear" class="com.nt.beans.EnggStudent" abstract="true">
+		<property name="subjects">
+			<list>
+				<value>c</value>
+				<value>m1</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="ece1stYear" class="com.nt.beans.EnggStudent" parent="1stYear">
+		<property name="subjects">
+			<list>
+			 <value>c</value>
+			 <value>m1</value>
+			 <value>ED</value>
+			</list>
+		</property>
+	</bean>
+ 
+ 	<bean id="eee1stYear" class="com.nt.beans.EnggStudent" parent="1stYear">
+		<property name="subjects">
+			<list>
+			 <value>c</value>
+			 <value>m1</value>
+			 <value>ETC</value>
+			</list>
+		</property>
+	</bean> -->
+	  <!-- Solution2 -->
+ <bean id="1stYear" class="com.nt.beans.EnggStudent" abstract="true">
+		<property name="subjects">
+			<list>
+				<value>c</value>
+				<value>m1</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="ece1stYear" class="com.nt.beans.EnggStudent" parent="1stYear">
+		<property name="subjects">
+			<list merge="true">
+			 <value>ED</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="eee1stYear" class="com.nt.beans.EnggStudent" parent="1stYear">
+		<property name="subjects">
+			<list merge="true">
+			 <value>ETC</value>
+			</list>
+		</property>
+	</bean>
+	
+ </beans>
+   

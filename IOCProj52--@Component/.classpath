@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/IOCLIB"/>
+	<classpathentry kind="lib" path="E:/Spring 4.2.2 Soft/spring-framework-4.2.2.RELEASE/libs/spring-aop-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Spring 4.2.2 Soft/spring-framework-4.2.2.RELEASE/libs/spring-aspects-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

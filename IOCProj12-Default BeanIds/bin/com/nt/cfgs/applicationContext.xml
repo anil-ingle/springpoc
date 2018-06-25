@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <!-- Taget Bean as Outer bean cfg -->
+  <bean  class="com.nt.beans.Student">
+      <property  name="sname" value="raja"/>
+      <property name="htDetails">
+        <!--Depedent Bean as Inner Bean cfg -->
+        <bean   class="com.nt.beans.HallTicket">
+           <property name="rollNo" value="8901"/>
+           <property name="college" value="CBIET"/>
+           <property name="course" value="Engineering"/>
+         </bean>
+      </property>
+   </bean>
+   
+   <bean  class="com.nt.beans.Student">
+      <property  name="sname" value="rani"/>
+   </bean>
+   
+    <bean  class="com.nt.beans.Student">
+      <property  name="sname" value="ramesh"/>
+   </bean>
+   
+   
+   
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="indiaCard" class="com.nt.beans.AadharDetails">
+    <property name="uid" value="1001"/>
+    <property name="name" value="raja"/>
+    <property name="dob" value="12/10/1999"/>
+    <property name="photoLocation" value="c:/abc/photo.gif"/>
+    <property name="income" value="9999.24"/>
+    <property name="phoneNumber" value="7777777777"/>
+    <property name="verifiers" value="modi,rahul,kejrywal"/>
+  </bean>   
+
+</beans>

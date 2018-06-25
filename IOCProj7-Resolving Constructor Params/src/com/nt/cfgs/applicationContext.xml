@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <!-- Resloving constructor params by type -->
+	<bean id="st" class="com.nt.beans.Student">
+		<constructor-arg value="90.45" type="float"  />
+		<constructor-arg value="raja" type="java.lang.String" />
+		<constructor-arg value="1001" type="int" />
+	</bean>
+	<!-- Resloving constructor params by index -->
+	<bean id="mk"  class="com.nt.beans.Marks">
+	   <constructor-arg value="25" index="2"/>
+	   <constructor-arg value="10" index="0"/>
+   	   <constructor-arg value="20" index="1"/>
+	</bean>
+	
+	<!-- Resloving constructor params by name -->
+	<bean id="cd"  class="com.nt.beans.CollegeDetails">
+	   <constructor-arg name="address" value="hyd"/>
+	   <constructor-arg name="rating" value="5"/>
+	   <constructor-arg name="collegeId" value="4567"/>
+	   <constructor-arg name="clgName" value="CBIET"/>
+	</bean>
+
+</beans>

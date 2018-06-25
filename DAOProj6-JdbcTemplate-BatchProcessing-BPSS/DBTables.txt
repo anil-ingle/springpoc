@@ -1,0 +1,10 @@
+ SQL>create table RailTicketReservation(pid number(5) primary key,
+        name varchar2(20),age number(4),
+         boardingFrom varchar2(20),
+         destination varchar2(20));
+
+Table created.
+
+SQL> create sequence PId_Seq start with 1 increment by 1;
+
+Sequence created.

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <bean  class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+     <property name="mappings">
+        <props>
+          <prop key="home.htm">pvc</prop>
+          <prop key="listStuds.htm">lsc</prop>
+          <prop key="edit_student.htm">esc</prop>
+          <prop key="insert_student.htm">isc</prop>
+        </props>
+     </property>
+  </bean>
+  
+  <!-- Cfg ParameterizableViewController -->
+  <bean id="pvc"  class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+     <property name="viewName" value="home"/>
+  </bean>
+
+   <!-- Cfg Controller class Configuration -->  
+   <bean id="lsc"  class="com.nt.controller.ListStudentController">
+      <property name="service" ref="stService"/>
+   </bean>
+   <bean id="esc"  class="com.nt.controller.EditStudentController">
+     <property name="service" ref="stService"/>
+     <property name="formView" value="edit_student"/>
+     <property name="commandName" value="stCmd"/>
+     <property name="commandClass" value="com.nt.command.StudentCommand"/>
+      <property name="validator" ref="stValidator"/>
+   </bean>
+   
+   <bean id="isc"  class="com.nt.controller.InsertStudentController">
+     <property name="service" ref="stService"/>
+     <property name="formView" value="insert_student"/>
+     <property name="commandName" value="stCmd"/>
+     <property name="commandClass" value="com.nt.command.StudentCommand"/>
+     <property name="sessionForm"  value="true"/>
+     <property name="validator" ref="stValidator"/>
+   </bean>
+   
+   <!-- Properties file configuration -->
+   <bean id="messageSource"  class="org.springframework.context.support.ResourceBundleMessageSource">
+     <property name="basename" value="com/nt/commons/Student_insert_edit_validations"/>
+   </bean>
+   
+   <!-- Validator class configuation -->
+    <bean id="stValidator"  class="com.nt.validator.StudentValidator"/> 
+   
+   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+     <property name="prefix" value="/WEB-INF/pages/"/>
+     <property name="suffix" value=".jsp"/>
+   </bean>
+   
+</beans>   

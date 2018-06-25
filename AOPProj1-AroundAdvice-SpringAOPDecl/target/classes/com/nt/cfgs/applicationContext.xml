@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!-- Cfg target class -->
+  <bean id="iac" class="com.nt.service.IntrAmtCalculator"/>
+  
+  <!-- Cfg Advice class -->
+  <bean id="pmAdvice" class="com.nt.aspect.PerformanceMonitoringAroundAdvice"/>
+  <bean id="logAdvice" class="com.nt.aspect.LogAroundAdvice"/>
+  <bean id="cacheAdvice" class="com.nt.aspect.CacheAdvice"/>
+  <!-- cfg ProxyFactoryBean  class to get Proxy class obj dynamically -->
+  <bean id="pfb"  class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="target" ref="iac"/>
+    <property name="interceptorNames">
+      <list>
+        <value>cacheAdvice</value>        
+        <value>logAdvice</value>
+        <value>pmAdvice</value>
+      </list>
+    </property> 
+  </bean>
+</beans>

@@ -1,0 +1,8 @@
+SQL> select * from Employee;
+
+       EID FIRSTNAME            LASTNAME             EMAIL
+---------- -------------------- -------------------- --------------------
+       103 rani                 raja                 raja@gmail.com
+       234 ramesh               hyd                  hyd@123.com
+       233 anil                 reddy                reddy@hotmail.com
+      1234 rajesh               vizag                vizag@123.com

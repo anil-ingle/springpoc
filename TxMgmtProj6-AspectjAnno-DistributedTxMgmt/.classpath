@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/ses-DTx/SpringGlobalTxTest/jars/atomikos-transactions-api.jar"/>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/ses-DTx/SpringGlobalTxTest/jars/atomikos-transactions-jta.jar"/>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/ses-DTx/SpringGlobalTxTest/jars/atomikos-util-3.7.0.jar"/>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/ses-DTx/SpringGlobalTxTest/jars/com.mysql.jdbc_5.1.5.jar"/>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/ses-DTx/SpringGlobalTxTest/jars/jta.jar"/>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/ses-DTx/SpringGlobalTxTest/jars/transactions-3.7.0.jar"/>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/ses-DTx/SpringGlobalTxTest/jars/transactions-jdbc-3.7.0.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

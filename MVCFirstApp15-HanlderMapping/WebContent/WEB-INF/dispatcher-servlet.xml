@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+<!--    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/> --> 
+   <!-- Controller class -->
+<!--    <bean id="/home.htm" class="com.nt.controller.WelcomeController"/>
+   <bean id="/aboutUs.htm" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+      <property name="viewName" value="about_us"/>
+   </bean>
+ -->
+  <!--  <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+      <property name="mappings">
+         <props>
+           <prop key="home.htm">wc</prop>
+           <prop key="aboutUs.htm">pvc</prop>
+         </props>
+      </property>
+   </bean>
+   
+   <bean id="wc" class="com.nt.controller.WelcomeController"/>
+   <bean id="pvc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+      <property name="viewName" value="about_us"/>
+   </bean> -->
+   
+   <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+   
+   <bean class="com.nt.controller.WelcomeController"/>
+   
+    <bean  class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+      <property name="viewName" value="about_us"/>
+   </bean>
+    
+   <!-- ViewResolver -->
+   <bean id="ivr" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+      <property name="prefix"  value="/WEB-INF/pages/"/>
+      <property name="suffix"  value=".jsp"/>
+   </bean>
+</beans>   

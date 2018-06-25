@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="drds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+     <property name="driverClassName"  value="oracle.jdbc.driver.OracleDriver"/>
+     <property name="url"  value="jdbc:oracle:thin:@localhost:1521:xe"/>
+     <property name="username"  value="system"/>
+     <property name="password"  value="manager"/>
+    <!--  <property name="connectionProperties">
+        <props>
+         <prop key="user">system</prop>
+         <prop key="password">manager</prop>
+        </props>
+     </property> -->
+  </bean>
+  
+  <bean id="scds" class="org.springframework.jdbc.datasource.SingleConnectionDataSource" parent="drds"/>
+
+  
+  <bean id="stDAO"  class="com.nt.dao.StudentDAOImpl">
+    <property name="ds" ref="scds"/>
+  </bean>
+  
+  <bean id="stService"  class="com.nt.service.StudentServiceImpl">
+    <property name="dao" ref="stDAO"/>
+  </bean>
+  
+  <bean id="stController" class="com.nt.controller.StudentController">
+    <property name="service" ref="stService"/>
+  </bean>
+   
+   
+  
+</beans>

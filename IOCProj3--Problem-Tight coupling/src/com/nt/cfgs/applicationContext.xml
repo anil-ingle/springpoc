@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+     
+  <!-- Depedent Beans cfg -->
+  <bean id="dtdc"  class="com.nt.beans.DTDC"/>
+  <bean id="blueDart"  class="com.nt.beans.BlueDart"/>
+  
+  <!-- Main Bean cfg -->
+  <bean id="fkt"  class="com.nt.beans.Flipkart">
+    <property name="dtdc" ref="dtdc"/>
+  </bean>
+  
+  
+</beans>

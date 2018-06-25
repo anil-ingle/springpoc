@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/log4j-1.2.14.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/slf4j-api-1.5.6.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/slf4j-log4j12-1.5.6.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/tiles-api-2.2.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/tiles-core-2.2.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/tiles-jsp-2.2.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/tiles-servlet-2.2.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/tiles-template-2.2.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/commons-beanutils-1.7.0.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/commons-collections-2.1.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/commons-digester-1.8.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/antlr-2.7.6.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/commons-fileupload-1.1.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/commons-io-1.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/backup/NApps/Apps/javaEE/spring/springmvc/_34Spring3Tiles2IntegrationPrf/WebContent/WEB-INF/lib/jstl-1.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/Tomcat 8.0/lib/servlet-api.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Spring 4.2.2 Soft/spring-framework-4.2.2.RELEASE/libs/spring-aop-4.2.2.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Spring 4.2.2 Soft/spring-framework-4.2.2.RELEASE/libs/spring-aspects-4.2.2.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Spring 4.2.2 Soft/spring-framework-4.2.2.RELEASE/libs/spring-beans-4.2.2.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Spring 4.2.2 Soft/spring-framework-4.2.2.RELEASE/libs/spring-context-4.2.2.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Spring 4.2.2 Soft/spring-framework-4.2.2.RELEASE/libs/spring-context-support-4.2.2.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Spring 4.2.2 Soft/spring-framework-4.2.2.RELEASE/libs/spring-core-4.2.2.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Spring 4.2.2 Soft/spring-framework-4.2.2.RELEASE/libs/spring-expression-4.2.2.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Spring 4.2.2 Soft/spring-framework-4.2.2.RELEASE/libs/spring-web-4.2.2.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Spring 4.2.2 Soft/spring-framework-4.2.2.RELEASE/libs/spring-webmvc-4.2.2.RELEASE.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Spring3-4jars/commons-logging.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

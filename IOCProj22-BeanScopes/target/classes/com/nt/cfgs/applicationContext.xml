@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+   
+   <bean id="lib" class="com.nt.beans.LibraryMembership">
+     <property name="lid" value="1001"/>
+     <property name="type" value="GOLD"/>
+   </bean>
+   
+   <bean id="st"  class="com.nt.beans.Student" dependency-check="all">
+      <property name="sno" value="101"/> 
+     <property name="sname" value="mahesh"/>
+
+      <property name="lib" ref="lib"/>
+    </bean>
+
+</beans>

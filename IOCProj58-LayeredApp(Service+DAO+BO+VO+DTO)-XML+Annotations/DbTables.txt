@@ -1,0 +1,8 @@
+SQL> desc spring_student;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNO                                       NOT NULL NUMBER(5)
+ SNAME                                              VARCHAR2(20)
+ TOTAL                                              NUMBER(5)
+ AVG                                                NUMBER(7,2)
+ RESULT                                             VARCHAR2(20)

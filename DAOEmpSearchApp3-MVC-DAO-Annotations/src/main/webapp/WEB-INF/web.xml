@@ -1,0 +1,17 @@
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+   <servlet>
+     <servlet-name>controller</servlet-name>
+     <servlet-class>com.nt.controller.EmployeeSearchControllerServlet</servlet-class>
+   </servlet>  
+   <servlet-mapping>
+     <servlet-name>controller</servlet-name>
+     <url-pattern>/controller</url-pattern>
+   </servlet-mapping>
+   
+   <welcome-file-list>
+     <welcome-file>search.html</welcome-file>
+   </welcome-file-list>
+   
+</web-app>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire="byName" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+     <bean id="tp2"  class="com.nt.service.TourPlan">
+<!--      explicit wiring -->
+     <property name="places">
+        <list>
+          <value>Goa</value>
+          <value>Chennai</value>
+          <value>PortBlair</value>
+          <value>Dummas</value>
+        </list>
+     </property> 
+   </bean> 
+
+   
+    <bean id="tp"  class="com.nt.service.TourPlan">
+<!--      explicit wiring -->
+     <property name="places">
+        <list>
+          <value>mahabhaleswar</value>
+          <value>ooty</value>
+          <value>MunnarHills</value>
+          <value>Araku</value>
+        </list>
+     </property>
+   </bean>
+   
+   <bean id="agent" class="com.nt.service.TravelAgent" autowire="constructor">
+     <constructor-arg ref="tp2"/>
+   </bean>
+ 
+</beans>

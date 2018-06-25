@@ -1,0 +1,57 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- XA DataSource obj pointing to Oracle JDBC con pool -->
+	<bean id="oraXADs" class="com.atomikos.jdbc.AtomikosDataSourceBean"
+		init-method="init" destroy-method="close">
+		<property name="uniqueResourceName" value="XAOra" />
+		<property name="xaDataSourceClassName" value="oracle.jdbc.xa.client.OracleXADataSource" />
+		<property name="xaProperties">
+			<props>
+				<prop key="databaseName">xe</prop>
+				<prop key="user">system</prop>
+				<prop key="password">manager</prop>
+				<prop key="URL">jdbc:oracle:thin:@localhost:1521:xe</prop>
+			</props>
+		</property>
+		<property name="poolSize" value="10" />
+	</bean>
+	
+<!-- XA DataSource obj pointing to Mysql JDBC con pool -->
+		<bean id="mysqlXADs" class="com.atomikos.jdbc.AtomikosDataSourceBean"
+		init-method="init" destroy-method="close">
+		<property name="uniqueResourceName" value="XAmysql" />
+		<property name="xaDataSourceClassName"
+			value="com.mysql.jdbc.jdbc2.optional.MysqlXADataSource" />
+		<property name="xaProperties">
+			<props>
+				<prop key="databaseName">ntsp86DB</prop>
+				<prop key="user">root</prop>
+				<prop key="password">root</prop>
+				<prop key="URL">jdbc:mysql:///ntsp86DB</prop>
+			</props>
+		</property>
+		<property name="poolSize" value="10" />
+	</bean>
+	
+  <!-- JdbcTemplate for Oracle  -->
+  <bean id="oraJt"  class="org.springframework.jdbc.core.JdbcTemplate">
+      <property name="dataSource"  ref="oraXADs"/>
+  </bean>
+  
+  <!-- JdbcTemplate for Mysql  -->
+  <bean id="mysqlJt"  class="org.springframework.jdbc.core.JdbcTemplate">
+      <property name="dataSource"  ref="mysqlXADs"/>
+  </bean>	
+		
+	
+
+	
+   <context:component-scan base-package="com.nt.dao"/>	
+</beans>

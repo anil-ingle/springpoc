@@ -1,0 +1,20 @@
+SQL> select * from userlist;
+
+UNAME                PWD
+-------------------- --------------------
+ramesh               chari
+raja                 rani
+ravi                 ramesh
+jani                 begum
+
+create or replace procedure  PRO_AUTHENTICATE(user in varchar2,pass in  varchar2,result out varchar2)as
+ cnt number;
+begin
+   select count(*) into cnt from  userlist where  uname=user and pwd=pass;
+   if(cnt<>0) then
+         result:='Valid Credentials';
+   else
+       result:='InValid Credentials';
+   end if;
+end;
+/

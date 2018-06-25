@@ -1,0 +1,23 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+  <bean id="dt" class="java.util.Date">
+     <property name="year" value="110"/>
+     <property name="month" value="10"/>
+     <property name="date" value="20"/>
+  </bean>
+ <bean id="robot" class="com.nt.beans.Robot">
+    <property name="id" value="1001"/>
+    <!-- <property name="name" value="chitti"/> -->
+    <property name="type" value="army"/>
+    <!--   <property name="dom" ref="dt"/> -->
+ </bean>
+<!--   <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+ -->
+   <context:annotation-config/>
+</beans>

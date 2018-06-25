@@ -1,0 +1,8 @@
+SQL> select * from userlist;
+
+UNAME                PWD
+-------------------- --------------------
+ramesh               chari
+raja                 rani
+ravi                 ramesh
+jani                 begum

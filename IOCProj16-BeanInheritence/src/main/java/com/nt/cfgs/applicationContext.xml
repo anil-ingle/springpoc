@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Problem -->
+<!-- 	<bean id="pulsor" class="com.nt.beans.Bike">
+		<property name="bikeId" value="TS07EN9898" />
+		<property name="color" value="black" />
+		<property name="engineCC" value="220" />
+		<property name="make" value="Bajaj" />
+	</bean>
+	<bean id="pulsor1" class="com.nt.beans.Bike">
+		<property name="bikeId" value="TS07EN9999" />
+		<property name="color" value="black" />
+		<property name="engineCC" value="220" />
+		<property name="make" value="Bajaj" />
+	</bean>
+	<bean id="pulsor2" class="com.nt.beans.Bike">
+		<property name="bikeId" value="TS07EN9910" />
+		<property name="color" value="black" />
+		<property name="engineCC" value="220" />
+		<property name="make" value="Bajaj" />
+	</bean>
+ -->
+  <!-- Solution1 -->
+  	<bean id="basePulsor" class="com.nt.beans.Bike" abstract="true">
+		<property name="color" value="black" />
+		<property name="engineCC" value="220" />
+		<property name="make" value="Bajaj" />
+	</bean>
+	
+	<bean id="pulsor1" class="com.nt.beans.Bike" parent="basePulsor">
+		<property name="bikeId" value="TS07EN9999" />
+	</bean>
+	<bean id="pulsor2" class="com.nt.beans.Bike" parent="basePulsor">
+		<property name="bikeId" value="TS07EN9910" />
+	</bean>
+	
+	<bean id="pulsor3" class="com.nt.beans.Bike" parent="basePulsor">
+		<property name="bikeId" value="TS07EN9898" />
+	</bean>
+ 
+ </beans>

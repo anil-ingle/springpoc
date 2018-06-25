@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd"> 
+
+	 <!-- Configure DataSource -->
+  <bean id="dbcp"  class="org.apache.commons.dbcp2.BasicDataSource">
+    <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+    <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+    <property name="username" value="system"/>
+    <property name="password" value="manager"/>
+    <property name="initialSize" value="10"/>
+    <property name="maxTotal" value="200"/>
+  </bean>
+  <bean id="sesfact"  class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+     <property name="dataSource"  ref="dbcp"/>
+     <property name="annotatedClasses">
+       <list>
+         <value>com.nt.domain.EmployeeHLO</value>
+       </list>
+     </property>  
+     <property name="hibernateProperties">
+        <props>
+          <prop key="hibernate.show_sql">true</prop>
+          <prop key="hibernate.format_sql">true</prop>
+          <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+          <prop key="connection.autocommit">true</prop>
+        </props>
+     </property>
+  </bean>
+  <bean id="template"  class="org.springframework.orm.hibernate5.HibernateTemplate">
+    <property name="sessionFactory" ref="sesfact"/>
+  </bean>
+  <bean id="empDAO"  class="com.nt.dao.EmployeeDAOImpl">
+    <property name="ht" ref="template"/>
+  </bean>
+  
+</beans>

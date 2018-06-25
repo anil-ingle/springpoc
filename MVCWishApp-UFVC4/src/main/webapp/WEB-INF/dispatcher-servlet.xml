@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <!-- Handler mapping -->   
+   <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+      <property name="mappings">
+        <props>
+           <prop key="welcome.htm">ufvc</prop>
+           <prop key="wish.htm">wsc</prop>
+           <prop key="contact_us.htm">ufvc</prop>
+           <prop key="about_us.htm">ufvc</prop>
+        </props>
+      </property>
+   </bean>
+   
+   <!-- Controller class -->
+   <bean id="ufvc"  class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+   
+   <bean id="wsc"  class="com.nt.controller.WishController"/>
+ 
+   
+   
+   <!-- View Resolver -->
+   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+      <property name="prefix" value="/WEB-INF/pages/"/>
+      <property name="suffix" value=".jsp"/>
+   </bean>
+
+</beans>   

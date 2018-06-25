@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="drds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+     <property name="driverClassName"  value="${jdbc.driver}"/>
+     <property name="url"  value="${jdbc.url}"/>
+     <property name="username"  value="${jdbc.user}"/>
+     <property name="password"  value="${jdbc.pwd}"/>
+  </bean>
+  
+  <bean id="stDAO"  class="com.nt.dao.StudentDAOImpl">
+    <property name="ds" ref="drds"/>
+  </bean>
+  
+  <bean id="stService"  class="com.nt.service.StudentServiceImpl">
+    <property name="dao" ref="stDAO"/>
+  </bean>
+  
+  <bean id="stController" class="com.nt.controller.StudentController">
+    <property name="service" ref="stService"/>
+  </bean>
+   
+  <bean id="pphc" 
+    class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+     <!-- <property name="location" value="src/com/nt/commons/jdbc.properties"/> -->
+     <property name="location" value="com/nt/commons/jdbc.properties"/>
+   </bean>
+   
+  
+</beans>

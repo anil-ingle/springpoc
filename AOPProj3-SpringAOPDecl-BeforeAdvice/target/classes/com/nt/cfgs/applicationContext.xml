@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!-- Cfg target class -->
+  <bean id="loanApprover" class="com.nt.service.LoanApprover"/>
+  
+  <!-- Cfg Advice class -->
+  <bean id="loanAdvice" class="com.nt.aspect.LoanAuditAdvice"/>
+  
+  <!-- cfg ProxyFactoryBean  class to get Proxy class obj dynamically -->
+  <bean id="pfb"  class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="target" ref="loanApprover"/>
+    <property name="interceptorNames">
+      <list>
+        <value>loanAdvice</value>        
+      </list>
+    </property> 
+  </bean>
+</beans>

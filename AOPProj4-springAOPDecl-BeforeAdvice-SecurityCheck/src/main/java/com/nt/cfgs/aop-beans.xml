@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  <bean id="authManager"  class="com.nt.aspect.AuthenticationManager">
+     <property name="dao" ref="authDAO"/>
+  </bean>
+  <!-- Cfg Advice class -->
+  <bean id="securityCheckAdvice"  class="com.nt.aspect.SecurityCheckAdvice">
+     <property name="manager"  ref="authManager"/>
+  </bean>
+  
+  <!-- Cfg ProxyFactoryBean to generate Proxy class object-->
+  <bean id="pfb"  class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="target"  ref="iac"/>
+    <property name="interceptorNames">
+       <list>
+         <value>securityCheckAdvice</value>
+       </list>
+    </property>
+    <property name="proxyInterfaces">
+      <list>
+        <value>com.nt.service.IntrAmtCalculator</value>
+      </list>
+    </property> 
+  </bean>
+  
+</beans>

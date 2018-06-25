@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <!-- Service Locator throuhg static factory method instantiation -->
+   <bean id="locator" 
+      class="com.nt.serviceLocator.ICCScoreCompServiceLocator" factory-method="getService">
+    <constructor-arg value="icc"/>    
+   </bean>
+   <!-- Local Service class cfg -->
+   <bean id="cbService"  class="com.nt.service.FindScoreServiceImpl">
+      <property name="extService" ref="locator"/>
+   </bean>
+     
+</beans>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <!-- Spring Bean cfg
+  <bean id="amtDetails" class="com.nt.beans.IntrAmtDetails">
+     <property name="pAmt" value="10000"/>
+     <property name="time" value="20"/>
+     <property name="rate" value="2"/>
+  </bean>   
+  <bean id="iac" class="com.nt.beans.IntrAmtCalculator">
+    <property name="details" ref="amtDetails"/>
+  </bean>
+ -->
+  <bean id="iac" class="com.nt.beans.IntrAmtCalculator">
+    <property name="details" value="10000,20,2"/>
+  </bean>
+  
+  <!-- <bean id="cec" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+   <property name="customEditors">
+     <map>
+       <entry key="com.nt.beans.IntrAmtDetails" value="com.nt.pe.AmtDetailsPropertyEditor"/>
+     </map>
+   </property>
+ </bean>
+  -->
+ 
+</beans>

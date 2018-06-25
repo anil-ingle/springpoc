@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="dt" class="java.util.Date"/>
+	<bean id="st" class="com.nt.beans.Student">
+		<property name="marks">
+			<list>
+				<value>90</value>
+				<value>56</value>
+				<value>90</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="apt" class="com.nt.beans.Apartment">
+		<property name="ownerNames">
+			<list>
+				<value>Mahesh Babu</value>
+				<value>Salman khan</value>
+				<value>raj pal yadav</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="mbn" class="com.nt.beans.MobileNetwork">
+		<property name="phones">
+			<set>
+				<value>986612134</value>
+				<value>986614134</value>
+				<value>986614134</value>
+			</set>
+		</property>
+	</bean>
+	<bean id="unsty" class="com.nt.beans.University">
+		<property name="faculties">
+			<map>
+				<entry>
+					<key>
+						<value>raja</value>
+					</key>
+					<value>java</value>
+				</entry>
+				
+				<entry key="ramesh" value=".net" />
+				
+				<entry key="mahesh">
+					<value>php</value>
+				</entry>
+			</map>
+		</property>
+		<property name="data">
+		  <map>
+		   <!--  <entry>
+		     <key><value>today</value></key>
+		     <ref bean="dt"/>
+		    </entry>
+		    
+		    <entry>
+		     <key><ref bean="dt"/></key>
+		     <ref bean="dt"/>
+		    </entry> -->
+		    
+		    <entry key="today" value-ref="dt"/>
+		    <entry key-ref="dt" value-ref="dt"/>
+		    
+		  </map>
+		</property>
+	</bean>
+	
+	<bean id="shop"  class="com.nt.beans.FruitShop">
+	  <property name="fruitColors">
+	    <props>
+	      <prop key="dt">green</prop>
+	      <prop key="mango">yellow</prop>
+	      <prop key="apple">red</prop>
+	    </props>
+	  </property>
+	</bean>
+
+
+</beans>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- Atomikos supplied Distributed Tx managener -->
+	<bean id="atomikosTxMgmr" class="com.atomikos.icatch.jta.UserTransactionManager"
+		init-method="init" destroy-method="close">
+		<property name="forceShutdown" value="true" />
+	</bean>
+
+	<!-- Atomikos supplied Distributed Txservice -->
+	<bean id="atomikosUT" class="com.atomikos.icatch.jta.UserTransactionImp">
+		<property name="transactionTimeout" value="300" />
+	</bean>
+
+    <!-- Cfg JTATransactionManager pointing to Atomokis Tx Service -->
+	<bean id="jtaTxMgmr"
+		class="org.springframework.transaction.jta.JtaTransactionManager">
+		<property name="transactionManager" ref="atomikosTxMgmr" />
+		<property name="userTransaction" ref="atomikosUT" />
+	</bean>
+
+  <tx:annotation-driven transaction-manager="jtaTxMgmr"/>
+    
+
+</beans>

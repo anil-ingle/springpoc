@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+  <bean id="stCustDAO"  class="com.nt.dao.StudentCustomerDAOImpl" scope="singleton"/>
+
+  <bean id="stBO" class="com.nt.bo.StudentBO" scope="prototype"/>
+  <bean  id="custBO" class="com.nt.bo.CustomerBO"  scope="prototype"/>
+  
+  <bean id="stCustService" class="com.nt.service.StudentCustomerService">
+    <property name="dao" ref="stCustDAO"/>
+    <lookup-method name="getStudentBO" bean="stBO"/>
+    <lookup-method name="getCustomerBO" bean="custBO"/>
+  </bean>
+  
+   <!-- <bean id="bpp"  class="com.nt.bpp.BaseBOBeanPostProcessor"/> -->
+     
+</beans>
